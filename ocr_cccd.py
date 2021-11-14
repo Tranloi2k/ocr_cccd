@@ -33,7 +33,7 @@ def ocr_cccd(image):
     #thres = cv2.morphologyEx(thres, cv2.MORPH_CLOSE, rect)
 
     #-c tessedit_char_whitelist=0123456789
-    options = "-l vie5 --psm 11 -c tessedit_char_whitelist=0123456789"
+    options = "-l eng --psm 11 -c tessedit_char_whitelist=0123456789"
     text = pytesseract.image_to_string(thres, config=options)
 
     return text
